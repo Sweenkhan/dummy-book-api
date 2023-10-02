@@ -13,10 +13,10 @@ const port = process.env.PORT || 8080
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-// app.use(cors({origin: "http://localhost:3000"}))
+app.use(cors({origin: "http://localhost:3000"}))
 
-app.use(cors())
-app.get("/dummyBookApi", async(req, res) => {
+// app.use(cors())
+app.get("/api/dummyBooks", async(req, res) => {
 
       res.send({status: 200, message: "getting all books", books })
 })
