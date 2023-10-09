@@ -15,10 +15,8 @@ app.use(express.urlencoded({extended: true}))
 
 // app.use(cors({origin: "http://localhost:3000"}))
 
-
 app.use(cors())
 app.get("/api/dummyBooks", async(req, res) => {
-
       res.send({status: 200, message: "getting all books", books })
 })
 
